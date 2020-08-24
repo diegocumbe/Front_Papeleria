@@ -1,0 +1,50 @@
+<div class="mainContent">
+
+    <div class="row">
+
+        <div class="col-12">
+            <ng-container *ngIf="productCar.length < 1">
+                <div class="alert alert-warning" role="alert">
+                    <h5>¡No tienes productos seleccionados en este momento!</h5>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="productCar.length >= 1">
+
+
+
+                <a *ngFor="let product of productCar">
+                    <ng-container *ngIf="carId === product?.car_id?._id">
+                        <div class="card" style="width: 28rem;">
+                            <div class="card-body">
+                                <h2 class="text-uppercase ">AQUI ESTÁ TU FACTURA</h2>
+                                <p class="card-text">nombre del producto : {{product?.product_id.name}}</p>
+                                <p class="card-text">Código : {{product?.product_id.sku}}</p>
+                                <p class="card-text"> cantidad : {{product?.quantity}}</p>
+                                <p class="card-text">precio : ${{product?.product_id.precio}}</p>
+                                <p class="card-text">Total a Pagar : ${{product?.product_id.precio}}*{{product?.quantity}}</p>
+                                <div id="button">
+                                    <button type="button" routerLink="/productos" class="btn btnInfo"><b>salir</b></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </ng-container>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+    <div class="row">
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+
+</div>

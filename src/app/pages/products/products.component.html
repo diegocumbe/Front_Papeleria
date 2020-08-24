@@ -1,0 +1,30 @@
+<div class="mainContent">
+    <div id="div" class="col-12">
+        <h2 class="text-uppercase ">Elija el producto que desea añadir al carrito de compras</h2>
+
+    </div>
+
+    <div class="row">
+        <ng-container *ngFor="let product of products">
+            <div class="col-3">
+                <div class="card" style="width:16rem;">
+                    <img [src]="product.image | image: product.sku" class="card-img-top">
+                    <div class="card-body">
+
+                        <h5 class="card-title">{{product?.name}}</h5>
+                        <small>{{ product?.sku }}</small>
+                        <p class="card-text">${{product.precio}}</p>
+                        <p class="card-text">{{product.description}}</p>
+                        <form ngNativeValidate #add="ngForm" (ngSubmit)="addToCar(add, product?._id)">
+                            <input type="number" ngModel name="quantity" style="width: 50%;" class="form-control" placeholder="Cantidad" required> <br>
+                            <button type="submit" style="width: 100%;background-color:rgb(235, 243, 13);" class="btn btnSuccess">Agregar al carrito</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+
+            </div>
+            <br>
+        </ng-container>
+    </div>
+</div>

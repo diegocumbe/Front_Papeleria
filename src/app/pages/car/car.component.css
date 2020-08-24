@@ -1,0 +1,19 @@
+.actionCart {
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+.mainContent {
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+#body {
+    background-image: url(https://estaticos.qdq.com/coverphotos/113/140/4e4ad7ec575e4e4993282e685fa1c56d.jpg);
+    background-size: 100%;
+}
+
+.row {
+    padding-bottom: 3%;
+    padding-right: 2%;
+}

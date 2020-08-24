@@ -1,0 +1,29 @@
+.btns button {
+    margin-right: 5px;
+}
+
+.navbar {
+    background-color: rgb(56, 56, 108);
+}
+
+#titulo {
+    padding-left: 40%;
+}
+
+#body {
+    background-image: url(https://estaticos.qdq.com/coverphotos/113/140/4e4ad7ec575e4e4993282e685fa1c56d.jpg);
+    background-size: 100%;
+}
+
+.navbar a {
+    /*color: #52B9A5;*/
+    color: bisque;
+}
+
+.mainContent {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 15px;
+}
